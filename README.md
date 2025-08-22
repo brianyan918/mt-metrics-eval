@@ -54,6 +54,16 @@ Once data is downloaded, you can optionally test the install:
 python3 -m unittest discover mt_metrics_eval "*_test.py"  # Takes ~70 seconds.
 ```
 
+## Simulating Document-level Data
+
+This fork of MTME supports document-level evaluation of wmt23 and 24 data. We recommend this setting primarily for the wmt23 MQM sets.
+
+To simulate document-level evaluation data, run the following command:
+```
+python segment_to_document_mtme.py --year wmt23 --lp en-de --mtme_data_path ~/.mt-metrics-eval/mt-metrics-eval-v2/ --type mqm
+```
+This will create a new lp called "en-de\_doc"
+
 ## Running from the command line
 
 Here are some examples of things you can do with the mtme script. They assume
