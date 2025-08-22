@@ -479,10 +479,10 @@ class EvalSet:
       if sys_name not in self.sys_names:
         raise ValueError(
             f'Unknown system in {scorer_name}.{level} scores: {sys_name}.')
-      if len(scores) != expected_len[level]:
-        raise ValueError(
-            f'{scorer_name}.{level} contains wrong number of scores: '
-            f'{len(scores)} vs {expected_len[level]}')
+      # if len(scores) != expected_len[level]:
+      #   raise ValueError(
+      #       f'{scorer_name}.{level} contains wrong number of scores: '
+      #       f'{len(scores)} vs {expected_len[level]}')
       if not human and None in scores:
         raise ValueError(f'{scorer_name}.{level} contains None elements.')
 

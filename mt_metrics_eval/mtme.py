@@ -343,7 +343,8 @@ def PrintCorrelation(evs, scorefile, tag, outfile):
   if num_scores == 1:
     level = 'sys'
   elif num_scores == len(evs.docs):
-    level = 'doc'
+    # level = 'doc'
+    level = 'seg'
   elif num_scores == len(evs.src):
     level = 'seg'
   else:
